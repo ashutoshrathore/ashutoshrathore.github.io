@@ -359,6 +359,90 @@
             scroll-behavior: smooth;
         }
 
+        /* Hero Tech Icons */
+        .hero-tech-icons {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+
+        .hero-icon {
+            position: absolute;
+            font-size: 1.5rem;
+            opacity: 0.2;
+            animation: heroIconFloat 12s ease-in-out infinite;
+            color: var(--accent);
+        }
+
+        .hero-icon:nth-child(1) {
+            top: 15%;
+            left: 70%;
+            animation-delay: 0s;
+        }
+
+        .hero-icon:nth-child(2) {
+            top: 35%;
+            left: 85%;
+            animation-delay: 1.5s;
+        }
+
+        .hero-icon:nth-child(3) {
+            top: 60%;
+            left: 75%;
+            animation-delay: 3s;
+        }
+
+        .hero-icon:nth-child(4) {
+            top: 80%;
+            left: 60%;
+            animation-delay: 4.5s;
+        }
+
+        .hero-icon:nth-child(5) {
+            top: 25%;
+            left: 15%;
+            animation-delay: 6s;
+        }
+
+        .hero-icon:nth-child(6) {
+            top: 70%;
+            left: 10%;
+            animation-delay: 7.5s;
+        }
+
+        .hero-icon:nth-child(7) {
+            top: 10%;
+            left: 40%;
+            animation-delay: 9s;
+        }
+
+        .hero-icon:nth-child(8) {
+            top: 50%;
+            left: 5%;
+            animation-delay: 10.5s;
+        }
+
+        @keyframes heroIconFloat {
+            0%, 100% { 
+                transform: translateY(0px) rotate(0deg); 
+                opacity: 0.2; 
+            }
+            50% { 
+                transform: translateY(-30px) rotate(360deg); 
+                opacity: 0.4; 
+            }
+        }
+
         /* Profile Photo */
         .profile-photo {
             width: 300px;
@@ -422,6 +506,16 @@
                 <p>Experienced Platform Engineer with over 11 years of expertise in Cloud, DevOps, and Infrastructure Automation. Driving Cloud adoption and designing secure, scalable solutions for business success.</p>
                 <a href="#projects" class="cta-button">View My Work</a>
             </div>
+            <div class="hero-tech-icons">
+                <div class="hero-icon">☁️</div>
+                <div class="hero-icon">⚙️</div>
+                <div class="hero-icon">🔧</div>
+                <div class="hero-icon">📊</div>
+                <div class="hero-icon">🚀</div>
+                <div class="hero-icon">🔒</div>
+                <div class="hero-icon">⚡</div>
+                <div class="hero-icon">🎯</div>
+            </div>
         </div>
         <div class="floating-elements" id="floatingElements"></div>
     </section>
@@ -476,6 +570,24 @@
                     </div>
                 </div>
                 
+                <div class="project-card">
+                    <h3>Kubernetes Implementation & Orchestration</h3>
+                    <p>Led and drove enterprise-wide Kubernetes implementation across multiple cloud environments. Designed container orchestration strategies, implemented CI/CD pipelines, and established best practices for microservices deployment and management.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Architecture</a>
+                        <a href="https://github.com/ashutoshrathore" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Application Scaling & Performance</h3>
+                    <p>Architected and implemented auto-scaling solutions for high-traffic applications, handling millions of requests. Built horizontal pod autoscaling, cluster autoscaling, and load balancing strategies to ensure optimal performance and cost efficiency.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Metrics</a>
+                        <a href="https://blog.ashutoshrathore.in" class="project-link">Blog</a>
+                    </div>
+                </div>
+
                 <div class="project-card">
                     <h3>Policy as Code Framework</h3>
                     <p>Designed and built comprehensive 'Policy as Code' framework for Riverty Cloud Platform to enhance security and compliance. Implemented HashiCorp Sentinel Policies for secure Terraform deployments across Azure and AWS environments.</p>
@@ -542,11 +654,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Ashutosh Rathore. Built with AI.</p>
-            <p style="margin-top: 0.5rem;">
-                <a href="https://ashutoshrathore.medium.com" style="color: var(--accent); text-decoration: none;">Medium</a> | 
-                <a href="https://github.com/ashutoshrathore" style="color: var(--accent); text-decoration: none;">GitHub</a>
-            </p>
+            <p>&copy; 2025 Ashutosh Rathore.</p>
         </div>
     </footer>
 
